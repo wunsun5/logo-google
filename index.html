@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Google</title>  
+    <style>
+        :root{
+            --circle: 50%;
+            --border: 4.2em solid;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .google{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30em;
+            height: 30em;
+            position: relative;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+            border-radius: var(--circle);
+        }
+
+        .google::before{
+            content: '';
+            position: absolute;
+            width: 14em;
+            height: 14em;
+            border: var(--border);
+            border-radius: var(--circle);
+            border-color: #ea4335 transparent #34a853 #fbbc05;
+            z-index: 12;
+        }
+
+        .google::after{
+            content: '';
+            position: absolute;
+            width: 6.2em;
+            height: 4.8em;
+            border-top: var(--border) #4285f4;
+            border-right: var(--border) #4285f4;
+            border-bottom: var(--border) #4285f4;
+            border-radius: 0 0 15em 0;
+            inset: 13em 15.4em;
+            z-index: 10;
+        }
+
+        .line{
+            position: absolute;
+            width: 14em;
+            height: 14em;
+            border: var(--border) transparent;
+            border-radius: var(--circle);
+            border-top-color: #ea4335;
+            transform: rotate(-22deg);
+            z-index: 15;
+        }
+
+        .line::before{
+            content: '';
+            position: absolute;
+            width: 14em;
+            height: 14em;
+            border: var(--border) transparent;
+            border-radius: var(--circle);
+            border-left-color: #34a853;
+            z-index: 15;
+            transform: translate(-50%, -50%) rotate(-50deg);
+            inset: 50%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="google">
+        <div class="line"></div>
+    </div>
+</body>
+</html>
